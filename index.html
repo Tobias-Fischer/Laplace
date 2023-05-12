@@ -44,17 +44,18 @@ The library documentation is available at <a href="https://aleximmer.github.io/L
 </code></pre>
 <p>The <a href="https://github.com/runame/laplace-redux">code</a> to reproduce the experiments in the paper is also publicly available; it provides examples of how to use our library for predictive uncertainty quantification, model selection, and continual learning.</p>
 <h2 id="setup">Setup</h2>
-<p>We assume <code>python3.8</code> since the package was developed with that version.
+<p>We assume <code>python&gt;=3.8</code> since the package was developed with that version.
 To install laplace with <code>pip</code>, run the following:</p>
 <pre><code class="language-bash">pip install laplace-torch
 </code></pre>
 <p>For development purposes, clone the repository and then install:</p>
 <pre><code class="language-bash"># or after cloning the repository for development
-pip install -e .
+poetry shell
+poetry install
 # run tests
-pip install -e .[tests]
-pytest tests/
+pytest .
 </code></pre>
+<p>This requires <a href="https://python-poetry.org/">poetry</a></p>
 <h2 id="structure">Structure</h2>
 <p>The laplace package consists of two main components:</p>
 <ol>
